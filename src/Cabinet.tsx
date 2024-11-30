@@ -3,6 +3,7 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 // import { Outlet } from 'react-router-dom';
 import "react-toastify/dist/ReactToastify.css";
+import { useLocation, useNavigate } from "react-router-dom";
 
 interface Product {
   id: number;
@@ -20,6 +21,8 @@ const Cabinet: React.FC = () => {
     price: "",
     status: "Open",
   });
+  const location = useLocation()
+  const navigate = useNavigate()
   const [editingProduct, setEditingProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<string>("All");
@@ -38,7 +41,7 @@ const Cabinet: React.FC = () => {
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [location.pathname,location,navigate]);
 
   const filteredProducts = products.filter((product) => {
     if (filter === "All") return true;

@@ -7,8 +7,8 @@ import Cabinet from './Cabinet';
 const App: React.FC = () => {
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/" element={<Register />} />
+      <Route path="/" element={<Login />} />
+      <Route path="/register" element={<Register />} />
       <Route path="/cabinet" element={<Cabinet />} />
     </Routes>
   );
