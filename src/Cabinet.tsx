@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 // import { Outlet } from 'react-router-dom';
 import "react-toastify/dist/ReactToastify.css";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 interface Product {
   id: number;
@@ -102,6 +102,7 @@ const Cabinet: React.FC = () => {
 
   return (
     <div className="container mt-5">
+      <Link to={"/"} className="btn btn-primary mb-3">Log Out</Link>
       <ToastContainer />
       <h2>Product Management</h2>
       <div className="row">

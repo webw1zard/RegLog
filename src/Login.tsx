@@ -62,9 +62,14 @@ const Login: React.FC = () => {
           Login
         </button>
 
-        <div><span className="fo">Dont have an Account:</span><Link to="/register" className="btn btn-secondary form-control mt-2 w-25 ml-5 gh">
-          Register
-        </Link>
+        <div>
+          <span className="fo">Dont have an Account:</span>
+          <Link
+            to="/"
+            className="btn btn-secondary form-control mt-2 w-25 ml-5 gh"
+          >
+            Register
+          </Link>
         </div>
       </form>
     </div>
